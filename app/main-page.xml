@@ -3,7 +3,6 @@
 
     <StackLayout class="p-20">
         <Label text="Plugins" class="h0 extra_bold pl black" />
-        <Button text="Google Maps" tap="tapComponents" path="google-maps/google-maps" class="h2" />
         <Button text="UI Charts" tap="tapComponents" path="charts/charts" class="h2" />
     </StackLayout>
 </Page>

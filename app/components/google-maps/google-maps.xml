@@ -1,7 +1,0 @@
-<Page xmlns="http://schemas.nativescript.org/tns.xsd" loaded="loaded"
-    xmlns:map="@nativescript/google-maps">
-    <ActionBar title="GOOGLE MAPS" icon="" />
-    <StackLayout>
-        <map:mapView ready="onMapReady" lat="{{latitude}}" lng="{{longitude}}" zoom="{{20}}}" />
-    </StackLayout>
-</Page>
