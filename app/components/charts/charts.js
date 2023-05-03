@@ -13,41 +13,74 @@ exports.chartViewLoaded = function(args) {
 
     const options = {
         chart: {
-            type: 'line',
+            type: 'pie',
+            options3d: {
+                enabled: true,
+                alpha: 45,
+
+            },
         },
         title: {
-            text: 'Monthly Average Temperature',
+            text: "Contents of Highsoft's weekly fruit delivery",
+
         },
         subtitle: {
-            text: 'Source: WorldClimate.com',
+            text: '3D donut in Highcharts',
+
         },
-        xAxis: {
-            categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
-        },
-        yAxis: {
-            title: {
-                text: 'Temperature (°C)',
+        plotOptions: {
+            pie: {
+                innerSize: 100,
+                depth: 45,
+
             },
         },
-        // plotOptions: {
-        //   line: {
-        //     dataLabels: {
-        //       enabled: true,
-        //     },
-        //     enableMouseTracking: true,
-        //   },
-        // },
         series: [{
-                name: 'Tokyo',
-                data: [7.0, 6.9, 9.5, 14.5, 18.4, 21.5, 25.2, 26.5, 23.3, 18.3, 13.9, 9.6],
+                name: 'Delivered amount',
+                data: [
+                    [
+                        'Bananas',
+                        8
+                    ],
+                    [
+                        'Kiwi',
+                        3
+                    ],
+                    [
+                        'Mixed nuts',
+                        1
+                    ],
+                    [
+                        'Oranges',
+                        6
+                    ],
+                    [
+                        'Apples',
+                        8
+                    ],
+                    [
+                        'Pears',
+                        4
+                    ],
+                    [
+                        'Clementines',
+                        4
+                    ],
+                    [
+                        'Reddish (bag)',
+                        1
+                    ],
+                    [
+                        'Grapes (bunch)',
+                        1
+                    ],
+
+                ],
+
             },
-            {
-                name: 'London',
-                data: [3.9, 4.2, 5.7, 8.5, 11.9, 15.2, 17.0, 16.6, 14.2, 10.3, 6.6, 4.8],
-            },
-        ]
+
+        ],
     }
 
     chartView.setOptions(options);
-
 }
