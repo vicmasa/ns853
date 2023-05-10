@@ -1,7 +1,8 @@
 <Page xmlns="http://schemas.nativescript.org/tns.xsd" loaded="loaded"
     xmlns:uc="@nativescript/ui-charts">
     <ActionBar title="UI CHART" icon="" />
-    <GridLayout>
+    <StackLayout>
+        <Button text="TAP open modal" tap="onTap" class="-primary" />
         <uc:UIChartsView id="chartView" loaded="chartViewLoaded" />
-    </GridLayout>
+    </StackLayout>
 </Page>

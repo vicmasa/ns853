@@ -1,0 +1,13 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd"
+    shownModally="onShownModally"
+    backgroundColor="#00000001"
+    xmlns:uc="@nativescript/ui-charts"
+    tap="hideModal">
+    <GridLayout rows="*,2*,*" columns="20,*,20">
+        <GridLayout row="1" col="1" rows="*,auto,auto" borderRadius="10" backgroundColor="white">
+            <uc:UIChartsView id="chartView" loaded="chartViewLoaded" />
+            <Button row="1" text="Stop propagation (no close modal)" tap="stopPropagation" />
+            <Button row="2" text="Hide modal" tap="hideModal" />
+        </GridLayout>
+    </GridLayout>
+</Page>

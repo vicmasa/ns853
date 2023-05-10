@@ -1,11 +1,35 @@
 const ViewModel = require('./charts-view-model');
-
+const modalchart = '~/modal/main-page';
 let page;
 exports.loaded = function(args) {
-    page = args.object;
-    page.bindingContext = ViewModel;
+        page = args.object;
+        page.bindingContext = ViewModel;
+    }
+    //MODAL LOGIC
+exports.onTap = function(args) {
+    const item = args.object.bindingContext;
+    setModalchart();
 }
 
+function setModalchart() {
+    const platform = 'android';
+    const option = {
+        context: {
+            platform: platform
+        },
+        closeCallback: () => {
+
+        },
+        fullscreen: true
+    };
+    if (platform == 'ios') {
+        option.ios = {
+            // eslint-disable-next-line no-undef
+            presentationStyle: UIModalPresentationStyle.OverFullScreen
+        }
+    }
+    page.showModal(modalchart, option);
+}
 exports.chartViewLoaded = function(args) {
     console.log('chartViewLoaded()');
 
