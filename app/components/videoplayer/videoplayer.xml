@@ -1,0 +1,9 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" loaded="loaded"
+    xmlns:VideoPlayer="nativescript-videoplayer" xmlns:exoplayer="@nstudio/nativescript-exoplayer">
+    <StackLayout>
+        <VideoPlayer:Video width="300" height="280" controls="true" autoplay="true"
+            src="https://liveams.viiamanager.com:5443/LiveApp/streams/Invian-cid1-Jumbo_Screen_TEST-lid85-Flujo.m3u8" />
+        <exoplayer:Video width="300" height="280" autoplay="true"
+            src="https://liveams.viiamanager.com:5443/LiveApp/streams/Invian-cid1-Jumbo_Screen_TEST-lid85-Flujo.m3u8" />
+    </StackLayout>
+</Page>
